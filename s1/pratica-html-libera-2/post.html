@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Titolo: la mia prima pagina web in html</title>
+    <meta name="description" content="Qui di solito si inserisce una breve descrizione della pagina web">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!-- questo è un commento -->
+<!-- alt + z per far sì che il codice vada a capo in automatico-->
+<!-- il plugin "web developer" di chrome è utile, installalo-->
+
+<body>
+
+    <h1> Titolo: la mia prima pagina web in html</h1>
+
+    <p> Questa è il mio primo paragrafo. Questa è il mio primo paragrafo. Questa è il mio primo paragrafo.
+        Questa è il mio primo paragrafo. Questa è il mio primo paragrafo.Questa è il mio primo paragrafo. </p>
+
+
+    <p>
+        Questa è la mia prima lista non ordinata:
+    <ul>
+        <li>primo elemento della lista</li>
+        <li>seconde elemento della lista </li>
+        <li>terzo elemento della lista</li>
+        <li>quarto elemento della lista</li>
+    </ul>
+    </p>
+
+
+    <p> Segue una lista ordinata
+        <ol>
+            <li>primo elemento lista ordinata</li>
+            <li>secondo elemento lisra ordinata</li>
+            <li>terzo elemento lista ordinata (contiene una lista non ordinata)
+                <ul>
+                <li>a</li>
+                <li>b</li>
+                </ul></li>
+        </ol>
+    </p>
+
+    <!-- Posso annidare una lista non ordinata in una lista ordinata?
+         Si, a patto che la lista contenga solo quella sotto-lista-->
+
+    <h2>Questo è un titolo secondario</h2>
+
+    <!-- Il tag blockquote è un elemnto blocco che di solito viene utilizzato per le citazioni-->
+    <blockquote> "Questa è una citazione in blocco:
+        Due cose sono infinite: l’universo e la stupidità umana, ma riguardo l’universo ho ancora dei dubbi.
+        (Albert Einstein)"</blockquote>
+
+    <p> Questo è un altro paragrafo Questo è un altro paragrafo Questo è un altro paragrafo
+        Questo è un altro paragrafo Questo è un altro paragrafo Questo è un altro paragrafo
+    </p>
+
+    <h3>Questo è un titolo con meno priorità di un titolo secondario</h3>
+
+    <p> Quando scrivo del codice in html e ho bisogno di scrivere in un testo "il segno maggiore" o
+        "il segno minore", devo utilizzare una particolare sintassi, altrimenti il browser
+        penserà che sono dei tag.</p>
+
+    <p>Per esempio per scrivere maggiore in un paragrafo, scriverò &lt;
+        mentre per scrivere il minore, scriverò &gt;
+    </p>
+
+    <p>Un discorso molto simile vale per gli apici, le virgolettte, e altri simboli</p>
+
+
+    <p>Quando voglio ottenere un testo in grassetto e allo stesso tempo voglio far capire
+        al browser che si tratta di una parola frase/rilevante, utilizzo il tag
+        <strong>concetto chiave</strong>. <br>
+
+        Se invece ho bisogno di un carattere corsivo, ma che allo stesso tempo faccia capire ai browser che si tratta un contenuto chiave (SEO), utilizzerò il tag: <em>questo è un testo corsivo e rilevante</em>.
+        <br>
+
+        Se invece avessi bisogni di inserire del testo in grassetto e in corsivo senza enfatizzarlo a livello SEO, utilizzerò rispettivamente il tag <b>b</b> e il tag <i>i</i>.
+    </p>
+
+    <p>Qualora avessi bisogno di inserire del testo di dimensioni rimpicciolite rispetto ai caratteri standard, per esempio quelle note che vengono inserite alla fine delle pagine, utilizzerò il tag <small>small</small>. </p> <br> 
+
+        <small>Questa è un testo scritto in un tag small</small>
+    
+    <hr> <!--con il tag "hr" (che è un tag empty, cioè non ha bisogno di essere chiuso) creo dei separatori di contenuto. Compaiono come linee, ma possono essere modificati con il CSS-->
+
+    <p>Con il tag <mark>questo testo sembrerà sottolineato con un evidenziatore</mark> </p>
+
+    <p>Se volessi inserire un collegamento ad un sito web
+        <a href="https://stackoverflow.com/" target="_blank" title="la community di developer
+            più grande del mondo"> stackoverflow</a>.
+    </p>
+
+    <p>Se ho per esmpio delle parole in inglese all'interno di un paragrafo, ma la lingua
+        della mia pagina web è in italiano, posso rendere quel testo in corsivo e al contempo
+        dire che si stratta di un termine inglese. Ad esempio
+        <i lang="en"> Creative Commons </i>.
+    </p>
+
+    <p>Per scrivere del testo non formattato, quindi senza colori e font, come se fosse
+        un pezzo di codice, utilizzo il tag
+        <code> testo non formattato </code>
+    </p>
+
+    <p>Se ho bisogno di scrivere un comando da tastiera...
+        <kbd>ctrl +c </kbd>
+    </p>
+
+    <hr> <!--con il tag "hr" (che è un tag empty, cioè non ha bisogno di essere chiuso) creo dei separatori di contenuto. Compaiono come linee, ma possono essere modificati con il CSS-->
+
+    <p> Il tag br <br> serve per andare a capo</p>
+
+    
+    <!-- le immg consigliate sono quelle a 72 dpi
+     le icone sono in formato gif
+    quelle in formato svg sono immagini vettoriali che stanno prendendo molto piede (molto utilizzate per le illustrazioni)-->
+
+
+    <img src="pexels-marek-piwnicki-10479429.jpg" alt="Testo alternativo" width="600" height="400"> 
+    <!-- questa è un'immagine presente nello stesso livello della nostra pagina html, ovvero nello stesso percorso/cartella. Per collegarla basterà inserire il nome del file immg.
+    
+    img è un elemento inline    
+
+    Width e height rappresentano rispettivamente le dimensioni in pixel che voglio assegnare alla mia immagine
+
+    il tag "alt" corrispende al testo alternativo che comparirà quando non sarà possibile visualizzare l'immagine-->
+
+
+    <p id="top"> <!--per ogra ignora il tag "id"--> <img src="cartella-immagini/pexels-саша-10096083.jpg" 
+        alt="questa è un'immagine presente in un percorso differente da quello della nostra pagina web" width="345" height="700">
+    In questo paragrafo vi è un'immagine, pertanto il testo e l'immagine si troveranno all'interno dello stesso blocco</p>
+
+    <figure>
+        <img src="https://images.pexels.com/photos/10765892/pexels-photo-10765892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="questa è un'immagine non presente nel mio pc, ma sul web" width="400" height="800">
+    <figcaption>Questa è una didascalia realizzata col tag figcaption</figcaption>
+    </figure>
+
+    <!--il tag figure il quale è un elemento blocco, mi permetta di chiudere in unico box un'immagine (che è un elemento inline) con la relativa didascalia-->
+
+
+    <figure> <!--posso utilizzare il tag "figure" (elemento bloccco) anche -->
+        <blockquote cite="https://drittoallameta.it/citazioni-famose/"> 
+            <!--"blockquote" serve per scrivere le citazioni, è un elemento blocco-->
+            <!-- con "cite" cito la fonte della citazione-->
+        "La mente è come un paracadute. Funziona solo se si apre."
+        <figcaption>(Albert Einsten)</figcaption>
+            <!-- in questo caso inerirò l'autore come didascalia e altri dettagli-->
+        </blockquote>
+    </figure>
+
+    <br>
+
+    <!--il tag "a" è un elemento inlne
+    il target="_blank" apre un collegamento in una nuova scheda-->
+    <a href="post2.html" title="Questo è un collegamento ad un'altra pagina web"> 
+        Questo è il teso che comparirà nel link</a>
+
+    <br>
+
+    <a href="post2.html" title="Questo link porta sempre allo stessa pagina web, ma aprendo un'altra scheda. Questp è possibile grazie al target _blank" target="_blank">
+    Questo è il teso del secondo link</a>
+
+    <br>
+
+    <a href="https://epicode.it/" title="questo link porta sul sito di epicode, quindi ad un sito web esterno" target="_blank">
+    Clicca qui per visitare il nostro sito web</a>
+    
+    <br>
+
+    <a href="#top">Torna in alto alla seconda immagine</a> 
+    <!-- questo è un link interno alla pagina che serve per tornare in un determinato punto di essa, in questo caso ci permetterà di tornare in alto-->
+
+    <hr>
+
+    <!-- Segue un menù di navigazione costituito da una lista non ordinata con 2 link-->
+    <ul>
+        <li><a href="intro/introduzione.html" title="Una breve introduzione" target="_blank">
+            Questa è una breve introduzione al mondo della programmazione che potrai leggere solo su visual studio code</a></li>
+        <li><a href="">Questo è un link che non funziona</a></li>
+    
+    </ul>
+
+    <a href="#">Torna all'inizio della pagna</a> <!--in questo modo creo un link interno che porterà sempre a inizio pagina-->
+
+    <hr>
+
+    <h2>Di seguito vediamo una tabella realizzata con l&#39;html</h2>
+
+    <table>
+        <tr> <!--Prima riga-->
+            <th>Prima colonna della prima riga</th>
+            <th>Seconda colonna della prima riga</th>
+        </tr>
+
+        <tr> <!--Seconda riga-->
+            <th>Prima colonna della seconda riga</th>
+            <th>Seconda colonna della seconda riga</th>
+        </tr>
+    </table>
+
+    <br> <hr> 
+
+    <h3>Questo è un esempio di form</h3>
+
+        <form action="lista_credenziali.php">
+            <label for="fname">      Nome    </label>       <!--Creo l'etichetta Nome-->
+            <input type="text" id="fname" name="fname">     <!--Creo lo spazio dove inserire il nome-->
+
+            <br><br>                                        <!--Creo dello spazio di due rientri fra un'eticheta e l'altra-->
+
+            <label for="surname">    Cognome </label>       <!--Creo l'etichetta Cognome-->
+            <input type="text" id="surname" name="surname"> <!--Creo lo spazio dove inserire il Cognome-->
+
+            <br><br>
+
+            <input type="submit" value="Iscriviti"> 
+            <!--Creo un pulsante attraverso il tag <input type="submit" e al suo interno inserisco del testo, ossia "Iscriviti" attraverso il tag "value"--> 
+
+            <br><br>
+
+            <!--Ora creo uno spazio un box per lasciare un commento, quindi del testo molto più lungo di semplici credenziali-->
+
+            <label for="opinione">il tuo feedback</label>   <!--creo l'etichetta che comparirà di fianco al box dei commenti-->
+            <textarea name="opinione" id="surname" cols="30" rows="10">Lascia qui la tua opinione</textarea> 
+            <!--creo il box dei commenti largo circa 30 caratteri di lunghezza per 10 righe di altezza -->
+        </form>
+
+        <table border="">
+            <caption> Prezziario abbonamento</caption>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Piano base</th>
+                <th>Piano medio</th>
+                <th>Piano esperto</th>
+            </tr>
+
+            <tr>
+                <th>Costo</th>
+                    <td>&euro;5</trd>
+                    <td>&euro;8</trd>
+                    <td>&euro;10</trd> 
+            </tr>
+
+            <tr>
+                <th>Assistenza</th>
+                <td colspan="2" align="center">Gratuita</td>
+                <td rowspan="2">&nbsp;</td>
+            </tr>
+
+            <tr>
+                <th colspan="3">Vantaggioso sempre</th>
+            </tr>
+
+            <tr>
+                <th colspan="2">1</th>
+                <th colspan="2">2</th>
+            </tr>
+        
+    
+        </table> 
+  
+    
+    <br>
+
+    <!-- Realizziamo un form per l'invio di una richiesta-->
+    <form action="server.php" method="POST">    
+        <!-- Collego il form ad un file php dove verranno inviati/archiviati i dati. I file php riguardano il backend--> 
+
+        <fieldset>
+            <legend>Info personali e generalit&agrave;</legend>
+            <label for="cognome"> Cognome </label>  <!-- Creazione etichetta spazio richiesta cognome user-->
+            <input type="text" name="cognome">      <!-- Creazione spazio per inserire cognome user-->
+            <br>                                    <!-- Definire l'attributo name servirà per raccogliere in un file.php i dati relativi alla voce cognome-->
+    
+            <label for="email">Email</label>
+            <input type="email" name="mail">
+            <br>
+    
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <br>
+    
+            <label for="data">Data di nascita</label>
+            <input type="date" name="date">
+            <br><br>
+    
+    
+    
+            <label for="sesso">Femmina</label>
+            <input type="radio" name="sesso" value="F">
+    
+            <label for="sesso">Maschio</label>
+            <input type="radio" name="sesso" value="M">
+            <br><br>
+        </fieldset>
+        
+
+        <fieldset>
+            <legend>Info lavorative</legend>
+
+        <label for="esperienza">Anni di esperienza</label>
+        <input type="range" min="1" max="10"> 
+        <br> <br>
+
+        
+            <label for="posizione_attuale">Posizione attuale</label>
+            <select name="posizione" id="posizione">
+                <optgroup>
+                    <option value="">--Scegli--</option>
+                    <option value="s">studente</option>
+                    <option value="d">disoccupato</option>
+                    <option value="i">inoccupato</option>
+                    <option value="l">lavoratore</option>
+                </optgroup>
+            </select>
+            <br> <br>
+        </fieldset>
+        
+
+       <fieldset>
+           <legend>Altro</legend>
+            <p>Interessi:</p>
+            <label for="interessi"> Sport</label> 
+            <input type="checkbox" value="sport"> <br>
+    
+            <label for="interessi"> Motori</label>
+            <input type="checkbox" value="motori"> <br>
+    
+            <label for="interessi">Tecnologia</label>
+            <input type="checkbox" value="tecnologia"> 
+       </fieldset>  <br>
+       
+
+        <fieldset>
+            <legend>Il tuo feedback</legend>
+            <label for="commento">Aiutaci a migliorare</label> <br>
+            <textarea name="commento" id="commento" cols="30" rows="10">Lascia qui la tua opinione</textarea>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Documento</legend>
+            <label for="documento">Allega un documento</label>
+            <input type="file" name="docum" id="docum" accept="docx,pdf,doc">
+        </fieldset> <br>
+
+       <div>
+            <input type="checkbox" name="accetta" id="accetta" value="SI" checked> 
+            <label for="accetta">Acconsento al trattamento dei dati</label>
+            <br><br>
+       </div>
+        
+
+        <input type="submit" value="Invia richiesta">
+
+    </form>
+
+            
+
+</body>
+
+</html>

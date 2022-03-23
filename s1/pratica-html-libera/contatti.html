@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restiamo in contatto</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="assets/img/logo.png" alt="logo-aziendale" width="50">
+            <figcaption>Il mio brand</figcaption>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Chi siamo</a></li>
+                <li><a href="#">I nostri servizi</a></li>
+                <li><a href="#">Contatti</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <hr>
+
+    <main>
+        <h1>Restiamo in contatto</h1>
+
+        <form action="raccolta_dati.php" method="post">
+            <fieldset>
+                <legend>Registrati</legend>
+                <label for="nome_cognome">Nome e Cognome</label>
+                <input type="text" name="nome_cognome" placeholder="Chi sei?">
+                <br>
+                <!-- il valore dell'attributo "for" quello dell'attributo "name" devono essere uguali, affinchè i dati vengano correttamente trasmessi al file php del backend-->
+
+                <label for="email">La tua email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="email" name="email" placeholder="La migliore...">
+                <br>
+
+                <label for="passw">Scegli password &nbsp;&nbsp;</label>
+                <input type="password" name="passw" placeholder="Scegli bene!">
+                <br> <br>
+
+                <input type="date" name="data_nascita" placeholder="Ma qaunto sei nato">
+
+                <label for="message">A noi interesa sapere ciò che pensi...</label>
+                <br>
+                <textarea name="message" cols="30" rows="10">Puoi darci la tua opinione se vuoi</textarea>
+                <br><br>
+
+                <button type="button" onclick="alert('Perfetto')"> Invia al mio indirizzo email</button>
+
+                <input type="submit" onclick="alert('Wow! Benvenuto')" value="Iscrivimi">
+
+            </fieldset>
+            <br>
+
+        </form>
+    </main>
+
+    <hr>
+
+
+    <footer>
+        <p>Il mio brand &copy;2021</p>
+
+        <p><small><i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nemo, omnis officia ipsam voluptas
+                    consequuntur expedita deserunt alias iusto nobis odio aut illo eaque dignissimos hic aspernatur
+                    quasi saepe fugiat.</i></small></p>
+
+        <address>87169, Via Guglielmini n°18, Milano <br>
+            333 3333333 <br>
+            info@htgaysaad.com</address>
+
+    </footer>
+
+</body>
+
+</html>

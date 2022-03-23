@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Docu</title>
+</head>
+<body>
+    <h1>Titolo h1</h1>
+
+    <p id="parag"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3 id="titolo_h3">Questo è un h3</h3>
+
+    <p id="sp"> Qui c'è un altro p </p>
+
+    <p id="cred"> Info utente</p>
+
+
+    <button type="button" onclick="document.write('Scrivi qualcosa')">Clicca</button>
+    
+
+
+    <script src="assets/js/myscript.js"></script> <!--Collego un foglio javascript esterno al mio  html-->
+    <!--Quando lo faccio, nel tag script html, non aggiungere nient'altro-->
+
+
+
+    <script>
+
+        // questo è un commento di javascript circoscritto ad una singola linea di codice
+
+        /* Questo è un commento di javascript che può estendersi su più linee di codiceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee */
+
+        var prima_var = "Tekken";   // definizione variabile con assegnazione di una stringa (stringa=testo)
+        document.write(prima_var);  // direttiva di putput la quale restituisce a display nella pagina la variabile "prima_var"
+
+        var second_var = "Ascolto Lil Xan";
+        document.getElementById("parag").innerHTML = second_var; 
+        // questa è un'altra direttiva di output che si lega ad un elemento html attraverso l'id e che in questo caso restituisce, andando a sostituire l'elemento "p" contrassegnato con "l'id parag", il contenuto di quel determinato tag html, con il contenuto della variabile "second_var"
+
+        document.getElementById("titolo_h3").innerHTML = "Contenuto che va sostituire testo in h3 con id titolo_h3";
+
+        document.getElementById("sp").innerHTML = 23;
+
+
+        alert(prima_var);           // Questo è un pop up contenente il contenuto della varibile "prima_var"
+
+        alert("Questo è un altro pop up con del testo");
+
+
+        var utenet;                 // definizione variabile, senza assegnazione 
+
+        var nome = "Paolo";         // definizione variabile con assegnazione di un valore stringa (stringa=testo)
+        console.log (nome);         // richiamo contenuto variabile nella console di google
+
+        var cognome = "Conticini"; 
+        console.log (cognome);
+ 
+        var secondo_nome = nome;    // posso attribbuire lo stesso valore a più variabili: "nome" e "secondo_nome" avranno lo stesso valore
+        console.log (secondo_nome);
+
+        var credenziali_utente = nome + " " + cognome; // concatenazione di due variabili con valori di stringhe e con l'aggiunta di uno spazio per distanziarli
+        document.getElementById("cred").innerHTML = "Le generaità del sospetto sono " + credenziali_utente;
+
+        console.log (credenziali_utente);
+
+        alert("Le generaità del sospetto sono " + credenziali_utente);
+
+
+        var num_intero = 12;        // nelle variabili posso inserire anche valori numerici
+        console.log(num_intero);    // e poi richiamarle nella console di google
+
+        var num_decimale = 12.7;    // idem per i numeri decimali
+        console.log (num_decimale);
+
+        var nume_in_string = "12.7" // posso assegnare, al contenuto dellle variabili, dei numeri che però verranno considerati stringhe di testo, proprio come se fossero parole
+        console.log (nume_in_string);
+
+        var sec_num_int = num_intero;       // la variabile "sec_num_int" ha lo stesso valore numerico  presente nella variabile "num_intero"
+        var somma_var = sec_num_int + num_intero; // pertanto se "num_inteero" vale 12, la variabile "somma_var" vale 24
+        console.log (somma_var);
+
+
+        alert(1);                   // QUesto è un pop up con dentro un numero
+
+
+        var variab_booleana = true; // stessa cosa per valori booleani
+        console.log (variab_booleana);
+
+        var variab_booleana = false; //cambio assegnazione alla variabile variab_booleana
+        console.log (variab_booleana);
+
+
+
+        // --- LET 
+
+        var frutta = "banana";
+        console.log ("valore di var frutta: " + frutta);
+
+        { //questo è un block scope, o blocco, anzi un arrey
+
+            let frutta = "melone";  // con let posso definire una variabile già definita in precedenza con var                
+            console.log ("valore di let frutta: " + frutta);
+
+        /* let frutta = "uva";
+            console.log (frutta); 
+            
+            Non posso modificare le variabili let nel block scope e non solo qui dentro */
+        }
+
+        var frutta = "melograno";   
+        // qui vado a sostituire il contenuto diìella variabile frutta definita in precedenza prima del block scope    
+        console.log ("valore di var frutta fuori dal blocco è: " + frutta);
+
+        
+        /*
+        {
+            var frutta_1 = "fragole";
+            console.log ("Contenuto della variabile var frutta_1 dentro il block scope: " + frutta_1);
+        }
+            Mi restituisce un errore */
+
+        let frutta_1 = "kiwi";
+        console.log ("Contenuto della variabile let frutta_1 fuori dal block scope: " + frutta_1);
+
+    /*  let frutta_1 = "avocado";
+        console.log (frutta_1); 
+
+        le variabili let, a prescindere dal fatto che si trovino dentro o fuori un block scope, non possono subire una modifica del proprio valore*/
+
+
+        {
+            var frutta_2 = "lampone";
+            console.log ("Questo è il valore di var frutta_2 presente in un block scope: " + frutta_2);
+        }
+
+    /*    let frutta_2 = "pera";
+        console.log ("Questo è il contenuto di let frutta_2 fuori dal block scope:" + frutta_2)    
+        
+        let di solito va utilizzato dentro un block scope e var va messo fuori dal block scope */
+
+
+        // --- CONST
+
+        var pet = "cane";       // definisco la variabile var pet con il relativo contenuto, cane
+        console.log (pet);
+
+        {
+        const pet = "gatto";    // ridefinisco il contenuto della variabile pet, ma attraverso "const", riassegnandole un nuovo contenuto
+        console.log (pet);
+        }
+
+        console.log (pet);      // fuori dal blocco però, la variabile pet riacqusterà il suo contenuto originario, ossia "cane"
+
+        
+
+        // -- ALCUNE OPERAZIONI MATEMATICHE
+
+        var number = 2;
+
+        var number1= 23.7;
+
+        var moltiplicazione = number * number1;
+
+        var number_string = "4";                                            // è una stringa
+
+        console.log (moltiplicazione);                                      // moltiplicazione
+
+        console.log ("Questa è una concatenazione: " + number + number1);   // concatenazione
+
+        alert(number_string - number1);                                     // sottrazione
+        console.log (number_string - number1);
+
+
+
+        // "" e ''
+
+        var dialogo = "Fabio diceva: 'Ma vaff' ";
+        console.log (dialogo);
+
+        var dialogo2 = "Marco diceva: 'L'anatra' ";
+        console.log (dialogo2);
+
+        var dialogo3 = 'In realà, l\'aquilone';                             // aggiungi l'elemento "\" prima dell'apostrofo
+        console.log (dialogo3);
+
+
+
+        // -- null, vuota e undefined
+
+        var asset = null;       //null
+        console.log (asset);
+
+        var asset1 = "";        // vuota  
+        console.log (asset1);
+
+        var asset2;             // undefinde
+        console.log (asset2);
+       
+
+
+        // -- OPERAZIONI MATEMATICHE
+
+        var numb = 12;
+        
+        var numb2 = 18;
+
+        var somma1 = numb += numb2;      // addizione con sostituzione contenuto variabile 
+        console.log (somma1);           // 30
+
+        numb += numb2;                  // addizione con sostituzione contenuto variabile
+        console.log (numb);             // 48     
+                                        
+        numb -= numb2;                  // sottrazione con sostituzione contenuto variabile                    
+        console.log (numb);             // 30    
+
+        numb *= numb2;                  // moltiplicazione con sostituzione 
+        console.log (numb)              // del contenuto dellaa variabile numb
+
+        numb2 /= numb;                  // divisione con sostituzione del contenuto
+        console.log (numb2);            // della variabile numb2
+
+
+
+        // ----- OPERATORI LOGICI
+
+        numb == numb2;                          // comparazione fra le 2 variabili
+        console.log (numb == numb2);
+
+        var comparazione = (numb > numb2);     // comparazione fra le 2 variabili 
+        console.log (comparazione);            // inserite in una variabile
+
+
+        numb > numb2 || numb == numb2;         //  || = or
+        console.log (comparazione);            
+        // almeno una delle due condizioni deve essere verificata
+
+
+        numb > numb2 && numb == numb2;         //  && = and
+        console.log (numb > numb2 && numb == numb2); 
+        // entrambe devono essere vere/verificate
+
+        !(numb == numb2);                          // ! = not
+        console.log (!(numb == numb2));
+        // qui la variabile è verificata, se è vero il contrario del contenuto delle ()
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>    
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+            data: {
+                name: "Marco",
+                lastname: "Rossi",
+                email: "tesdssddst.shaylee@example.org",
+                password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+                role_id: 4
+            }
+
+-------------------------------------------------------------
+
+fetch(
+            'https://sofin.wp-admin.it/public/api/v1/user',
+             {
+                method: 'POST', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: "Marco",
+                    lastname: "Rossi",
+                    email: "tesdDSDSDSDssddst.shaylee@example.org",
+                    password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+                    role_id: 4
+                }),
+            }
+        )
+
+----------------------------------------------------------------------
+$.ajax({
+            url: 'https://sofin.wp-admin.it/public/api/v1/user',
+            method: 'POST',
+            data: {
+                name: "Mario",
+                lastname: "Rossi",
+                email: "test.shaSDADSADSAylee@example.org",
+                email_verified_at: "2021-12-13T14:17:06.000000Z",
+                password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+                role_id: 4,
+            }
+        })

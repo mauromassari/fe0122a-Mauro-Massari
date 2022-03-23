@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        /* Per il menu dropdown*/
+        nav{
+            background-color: aqua;     
+            padding: 20px;    
+        }
+
+        .nascondi{
+            display: none;
+        }
+
+
+        /* Per i tasti "ambia-stile" */
+        .testoBold{
+            font-weight: bold;
+        }
+
+        .testoItalic{
+            font-style: italic;
+        }
+
+        .testoPurple{
+            color: Purple;
+        }
+
+    </style>
+
+<body>
+    <nav>
+
+        <ul class="nascondi" >
+            <li> <button id="bold" class="testoBold">Bold</button>     </li>
+            <li> <button id="italic" class="testoItalic">Italic</button> </li>
+            <li> <button id="purple" class="testoPurple">Purple</button> </li>
+        </ul>
+
+        <button id="btn_menu"> Menu </button>
+
+    </nav>
+
+    
+    
+    <p> Mini lista degli impegni: <br><br>
+
+        <input type="text"> <button id="addImpegno">Aggiungi impegno</button> <br><br>
+    </p>
+
+    <ul id="lista"></ul>
+
+
+
+    <script>
+
+        //menu dropdown
+        let pulsante = document.querySelector("#btn_menu");
+
+        let navUl = document.querySelector("ul");
+
+        
+        pulsante.addEventListener("click", function(){
+           navUl.classList.toggle('nascondi');
+        });
+
+
+    
+        //pulsantiera
+        let parag = document.querySelector("p");
+
+            //tasto Bold
+            let tastoBold = document.querySelector("#bold");
+
+            tastoBold.addEventListener("click", function(){
+                parag.classList.toggle("testoBold");
+            })
+
+
+            //tasto Italic
+            let tastoItalic = document.querySelector("#italic");
+
+            tastoItalic.addEventListener("click", function(){
+                parag.classList.toggle("testoItalic");
+            })
+
+
+            //tasto Purple
+            let tastoPurp = document.querySelector("#purple");
+
+            tastoPurp.addEventListener("click", function(){
+                parag.classList.toggle("testoPurple");
+            })
+
+
+
+        //mini lista degli impegni  
+        
+        let buttAddImo= document.querySelector("#addImpegno")
+        
+        
+
+        buttAddImo.addEventListener("click", function(){
+
+            let insImp = document.querySelector("input").value;
+            let impegni = document.createElement("li");
+
+            impegni.innerHTML = insImp;
+            document.getElementById("lista").appendChild(impegni);
+
+            document.querySelector("input").value = "";
+
+            
+   
+        })
+
+
+        
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!-- TRACCIA: Crea un abarra di caricamento con all'interno la relativa percentuale
+      utilizzando ciò che imparato nella scorsa lezione su jQuery-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra di caricamento</title>
+</head>
+<body>
+    <style>
+
+        .boxEst{
+            border: 2px solid grey;
+            margin:50px;
+            padding: 10px;
+        }
+
+        #box{
+          height: 15px;
+          width: 0;  
+          background: rgb(108,193,226);
+          background: linear-gradient(90deg, rgba(108,193,226,1) 0%, rgba(57,47,122,1) 100%);
+          border-radius: 3%;
+          padding: 2px;
+        }
+
+        #testo{
+            color: antiquewhite;
+            font-size: smaller;
+            font-weight: bolder;
+            text-align: center;   
+        }
+
+        .cont{
+            border: 1px solid grey;
+            border-radius: 3%;
+            width: 1002px;
+        }
+    </style>
+
+<div class="boxEst">
+  <button id="inizia" >Inizia il caricamento</button>  
+
+  <button id="reset" >Resetta caricamento</button>  
+
+  <br><br>
+
+  
+  <br>
+
+    
+        <div class="cont"><div id="box" > <div id="testo"></div> </div></div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(() => {
+
+            $("#inizia").click(function(){
+                $("#box").animate({
+                    width: "1000"
+                }, {
+                    duration: 6000,
+                    easing: "swing",
+                    step: function(x){
+                        $("#testo").text(Math.round(x * 100 / 1000) + "%");
+                    }
+                })
+            })
+
+            $("#reset").click(function(){
+                $("#box").animate({
+                    width: "",
+                    opacity: 0
+                }, 2000)
+            })
+        })
+    </script>
+</body>
+</html>

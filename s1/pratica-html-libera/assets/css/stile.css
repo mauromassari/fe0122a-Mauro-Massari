@@ -1,0 +1,11 @@
+/* Questo è un foglio CSS */
+/* Questo è un commento  */
+
+body { background-color: #abc0b9;}
+
+/* Quando nseriscoo l'asterisco è come se applicassi le mie personalizzazioni a l'intera pagina html collegata. Infatti si chiama selettore universale*/
+
+header { 
+    background-color: #F2CC39;
+    height: 200px;
+}

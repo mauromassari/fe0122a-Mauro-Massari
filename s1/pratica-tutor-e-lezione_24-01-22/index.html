@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+   <main>
+        <table border="">
+            <caption> Prezziario abbonamento</caption>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Piano base</th>
+                <th>Piano medio</th>
+                <th>Piano esperto</th>
+            </tr>
+
+            <tr>
+                <th>Costo</th>
+                    <td>&euro;5</trd>
+                    <td>&euro;8</trd>
+                    <td>&euro;10</trd> 
+            </tr>
+
+            <tr>
+                <th>Assistenza</th>
+                <td colspan="2" align="center">Gratuita</td>
+                <td rowspan="2">&nbsp;</td>
+            </tr>
+
+            <tr>
+                <th colspan="3">Vantaggioso sempre</th>
+            </tr>
+
+            <tr>
+                <th colspan="2">1</th>
+                <th colspan="2">2</th>
+            </tr>
+        
+    
+        </table> 
+   </main>
+    
+    <br>
+
+    <!-- Realizziamo un form per l'invio di una richiesta-->
+    <form action="server.php" method="POST">    <!-- Collego il form ad un file php dove verranno inviati/archiviati i dati. I file php riguardano il backend--> 
+
+        <fieldset>                                  <!-- Creo un riquadro intorno ad una determinata sezione del form-->
+
+            <legend>Info personali e generalit&agrave;</legend>     <!-- Realizzo un'etichetta di quella specifica sezione-->
+
+            <label for="cognome"> Cognome </label>  <!-- Creazione etichetta spazio richiesta cognome user-->
+            <input type="text" name="cognome">      <!-- Creazione spazio per inserire cognome user-->
+            <br>                                    <!-- Definire l'attributo name servirà per raccogliere in un file.php i dati relativi alla voce cognome-->
+    
+            <label for="email">Email</label>
+            <input type="email" name="mail">
+            <br>
+    
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <br>
+    
+            <label for="data">Data di nascita</label>
+            <input type="date" name="date">
+            <br><br>
+    
+    
+    
+            <label for="sesso">Femmina</label>
+            <input type="radio" name="sesso" value="F">
+    
+            <label for="sesso">Maschio</label>
+            <input type="radio" name="sesso" value="M">
+            <br><br>
+        </fieldset>
+        
+
+        <fieldset>
+            <legend>Info lavorative</legend>
+
+        <label for="esperienza">Anni di esperienza</label>
+        <input type="range" min="1" max="10">                       
+        <!-- In questa sezione del form, definisco uno spazio dove l'user può scegliere un valore compreso in un range  da me definito con valori minimi e massimi-->
+        <br> <br>
+
+        
+            
+        <!-- Qui creo una sezione del form con un menu a tendina dove è possibile scegliere una determinata voce-->
+
+        <label for="posizione_attuale">Posizione attuale</label>
+            <select name="posizione" id="posizione">    
+                                                         
+                <optgroup>                                          <!--Con il tag optiongroup creo l'insieme delle voci del menu-->
+                    <option value="">--Scegli--</option>            <!-- Con il tag option e l'attributo value definsco le diverse voci del menu a tendina-->      
+                    <option value="s">studente</option>
+                    <option value="d">disoccupato</option>
+                    <option value="i">inoccupato</option>
+                    <option value="l">lavoratore</option>
+                </optgroup>
+            </select>
+            <br> <br>
+        </fieldset>
+        
+
+       <fieldset>
+           <legend>Altro</legend>
+            <p>Interessi:</p>
+            <label for="interessi"> Sport</label> 
+            <input type="checkbox" value="sport"> <br>
+    
+            <label for="interessi"> Motori</label>
+            <input type="checkbox" value="motori"> <br>
+    
+            <label for="interessi">Tecnologia</label>
+            <input type="checkbox" value="tecnologia"> 
+       </fieldset>  <br>
+       
+
+        <fieldset>
+            <legend>Il tuo feedback</legend>
+            <label for="commento">Aiutaci a migliorare</label> <br>
+            <textarea name="commento" id="commento" cols="30" rows="10">Lascia qui la tua opinione</textarea>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Documento</legend>
+            <label for="documento">Allega un documento</label>
+            <input type="file" name="docum" id="docum" accept="docx,pdf,doc">
+        </fieldset> <br>
+
+       <div>
+            <input type="checkbox" name="accetta" id="accetta" value="SI" checked> 
+            <label for="accetta">Acconsento al trattamento dei dati</label>
+            <br><br>
+       </div>
+        
+
+        <input type="submit" value="Invia richiesta">
+
+    </form>
+    
+</body>
+</html>

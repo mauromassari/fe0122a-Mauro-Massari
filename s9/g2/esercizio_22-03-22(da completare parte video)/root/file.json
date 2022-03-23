@@ -1,0 +1,46 @@
+[ 
+    {
+        "title": "Heart Beat",
+        "file": "heartbeat.mp3",
+        "type": "audio"
+    },
+
+    {
+        "title": "Honky Tonky Piano",
+        "file": "honky_tonky_piano.mp3",
+        "type": "audio"
+    },
+
+    {
+        "title": "Mastermaind",
+        "file": "mastermind.mp3",
+        "type": "audio"
+    },
+ 
+    {
+        "title": "By Night",
+        "file": "by_night.mp4",
+        "type": "video"
+    },
+
+    {
+        "title": "Flight",
+        "file": "Flight.mp4",
+        "type": "video"
+    },
+
+    {
+        "title": "Flowers",
+        "file": "Flowers.mp4",
+        "type": "video"
+    },
+
+    {
+        "title": "Sea",
+        "file": "Sea.mp4",
+        "type": "video"
+    }
+]
+
+
+

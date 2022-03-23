@@ -1,0 +1,93 @@
+<!-- Html non è un linguaggio di programmazione-->
+<!-- Html serve solo per creare la struttura. Anche se può essere utilizzato per fare la grafica, NON VA FATTO! L'ASPETTO VA FATTO CON IL CSS -->
+<!-- h1 è il tag più importante per i motori di ricerca, bisogna metterne solo 1 per pagina, di solito corrisponde al titolo della pagina -->
+<!-- Cartella assets di solito contiene immag, documenti, allegati, ... -->
+<!-- Cerca di non utilizzare maiuscole, apostrofi, accenti, ... -->
+
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <meta charset="UTF-8">                              <!-- meta = tag | charset = attributo | UTF-8 = valore (in questo caso è il set di caratteri occidentali)-->
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--questo meta serve per far adattare la pagina al dispositivo sul quale viene visualizzata-->
+
+        <title> NOME BRAND | La mia pagine </title>         <!-- apparirà come nome della scheda, va ad influire anche a livello SEO, è il titolo del contenuto della pagina-->
+    </head>
+    
+
+    <body>
+        <!--Più tag utilizzo nella sezione body e più strutturata sarà la nostra pagina e maggiore sarà poi il nostro controllo con il CSS-->
+        <!--Un testo presente nel body senza tag, è privo di controllo/personalizzazione con il CSS-->
+
+        <p> Questo è il tag per scrivere un paragrafo </p>
+
+
+
+        <ul> 
+            <p> Segue una lista non ordinata: </p>
+
+            <li> primo elementio lista non ordinata </li>
+            <li> secon elementio lista non ordinata </li>
+            <li> terzo elementio lista non ordinata </li>
+            <li> quart elementio lista non ordinata </li>
+        </ul>
+
+
+        <!-- Per ottenere una lista non ordinata di 4 o più elementi in un colpo solo, e magari già con del testo dentro, digito: 
+            ul>li*4{testo}-->
+
+        <ul>
+            <li>testo</li>
+            <li>testo</li>
+            <li>testo</li>
+            <li>testo</li>
+        </ul>
+
+        <!-- Una lista di tag <li> senza il tag <ul> di apertura è considerato coem un tag rotto. Infuisce negativamente a iivello SEO-->
+
+
+        <ul>
+            <li>testo</li>
+            <li>testo</li>
+            <li>testo</li>
+            <li>testo</li>
+            <li>testo</li>
+            <li>testo</li>
+            <li> <span>lista annidata</span>                         <!-- Qui ho creato una lista annidata, ovvero una lista dentro un'altra lista-->
+                                                                     <!-- il tag <span> mi serve per creare/isolare un elemento. È un elemento inline-->
+                <ul>
+                    <li>testo di lista annidata</li>
+                    <li>testo di lista annidata</li>
+                    <li>testo di lista annidata</li>
+                </ul>
+
+            </li>
+        </ul>
+        
+    <hr> <!-- Separatore di contenuti/zone , non di testo. Per il testo usa il tag <br>--> 
+
+        <h2>Questa è un&#39; immagine presente nella cartella img</h2>
+        <img src="assets/img/th.jpg" alt="Questa è simbolo di html"> <br>                                   
+        <!-- Questa è un'immagine presente già sul nostro pc-->           
+
+        <h2>Questa è un&#39; immagine presente sul web</h2>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.d5-pDpGNuK_0a36P9R1H_gHaD3&pid=Api&P=0&w=389&h=203" alt=" Questo è il tag html" width="23%">
+        <!-- Questa è un'immagine presente sul web-->  
+        <!-- La percentuale in width fa rimento allo spazio disponibile della pagina. Se inserisco l'img in un altro elemento, la % farà riferimento allo spazio disponibile di quell'altro elemento-->
+
+
+        <p> <!--Per creare del testo segnaposto, digitare lorem
+                Per ottenere più righe, es:     lorem*10-->
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae rerum saepe omnis alias excepturi, sed laboriosam in illo nisi iure minus officiis vel ut consectetur quae eveniet atque repellat? Exercitationem!
+            Nihil quam recusandae voluptates voluptatibus? Porro aperiam sapiente dolor quam aut repellat possimus eveniet laboriosam harum, suscipit maxime vero ad at nam error mollitia molestiae beatae, commodi, similique cum illo.
+            Dolore, rerum consequuntur dignissimos cum, obcaecati quis voluptate mollitia veritatis dolorem natus dicta cupiditate soluta accusantium tenetur tempore error. Cupiditate molestiae qui rerum sequi. Quas cumque a odit. Assumenda, perspiciatis.
+            Voluptatem animi a in porro dolore minima fugiat necessitatibus iure quod possimus perspiciatis, fuga voluptates recusandae atque aliquid eius fugit officiis enim! Consequatur perferendis minima aliquam vel corrupti? Blanditiis, porro?
+            Maiores aut officiis, optio sapiente nihil amet ipsa consequuntur pariatur, architecto doloribus possimus dicta molestiae ullam quod earum sit, dolorum qui tenetur fugiat esse adipisci? Aliquam ea earum molestiae eum.
+        </p>
+
+    </body>
+
+</html>\

@@ -1,0 +1,75 @@
+
+@media screen and (min-width:1200px){
+
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+    div{
+        /* width: 20.5%; */
+        /* flex-basis: 212.78px; */
+
+        margin: 1em;
+        text-align: center;
+        
+        
+        
+        height: 212.78px;
+        flex-basis: 20.5%;
+        box-shadow: black 2px 5px 5px;
+        
+    }
+
+    section{
+        background-color: hsl(0deg 0% 40%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2em;
+        font-family: 'Indie Flower', cursive;
+        
+    }
+
+    .giallo {
+        background: rgb(248,248,198);
+        background: linear-gradient(180deg, rgba(248,248,198,1) 0%, rgba(189,189,163,1) 100%);
+        transform: rotate(-5deg);
+    }
+
+    .verde {
+        background: rgb(201,251,202);
+        background: linear-gradient(180deg, rgba(201,251,202,1) 0%, rgba(189,189,163,1) 100%);
+        transform: rotate(3deg);
+    }
+
+    .viola {
+        background: rgb(199,199,245);
+        background: linear-gradient(180deg, rgba(199,199,245,1) 0%, rgba(189,189,163,1) 100%);
+        transform: rotate(-4deg);
+    }
+
+
+    .verde.diverso{
+        transform: rotate(9deg);
+        transform-origin: 70% 60%;
+    }
+
+
+    h2{
+        padding-top: 1.7em;
+        font-size: 2.5em;
+        margin-bottom: 0.25em;
+        font-weight: bold;
+    }
+    
+    
+    p{
+        font-size: 1.8em;
+    }
+
+
+    div:hover, .verde.diverso:hover{
+        transform: rotate(0);
+        transform: scale(1.3, 1.3);
+        z-index: 1;
+    }
+
+}

@@ -1,0 +1,13 @@
+/* Creo in questo partial una funzione che dato un colore di background imposti il colore 
+del testo bianco o nero in funzione della luminosità dello sfondo */
+
+@function crea-contrasto-sfondo($color){
+    
+    @if(lightness($color) > 50){
+        @return black;
+     }  
+     
+     @else {
+            @return white;
+        }
+} 
